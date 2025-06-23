@@ -20,7 +20,7 @@ QUICK START
 
 1. Clone the Dojo
 
-
+https://github.com/galyanrajat/ai_jurnlist_gen_ai.git
 ```
 
 
