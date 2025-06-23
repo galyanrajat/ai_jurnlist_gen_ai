@@ -19,21 +19,20 @@ PREREQUISITES
 QUICK START
 
 1. Clone the Dojo
+
+
 ```
-git clone https://github.com/AIwithhassan/newsninja.git
-cd NewsNinja
-```
+
 
 2. Install Dependencies
 ```
-pipenv install
-pipenv shell
+pip install -r requirements.txt
 ```
 
 3. Ninja Secrets (Environment Setup)
 Create .env file:
 ```
-cp .env.example .env
+.enc
 ```
 
 Configure your secrets in .env:
@@ -56,12 +55,12 @@ RUNNING THE NINJA
 
 First terminal (Backend):
 ```
-pipenv run python backend.py
+ python backend.py
 ```
 
 Second terminal (Frontend):
 ```
-pipenv run streamlit run frontend.py
+ streamlit run frontend.py
 ```
 
 ---
@@ -81,13 +80,12 @@ PROJECT STRUCTURE
 
 ---
 NOTES
-- First scrape takes 15-20 seconds (good ninjas are patient)
+- First scrape takes 15-20 seconds 
 - Reddit scraping uses real browser emulation via MCP
-- Keep .env file secret (ninjas never reveal their tools)
+- Keep .env file secret (jurnilist never reveal their tools)
 
 ---
 SUPPORT
-Open an issue: https://github.com/yourusername/NewsNinja/issues
 Bright Data support: https://brightdata.com/support
 
 *"In the darkness of information overload, be the ninja."* 🌑"# ai_jurnlist_gen_ai" 
