@@ -89,3 +89,6 @@ SUPPORT
 Bright Data support: https://brightdata.com/support
 
 *"In the darkness of information overload, be the ninja."* 🌑"# ai_jurnlist_gen_ai" 
+
+![backend_running](F:\vscode main\ai_jurnilistmain\code_run (1).png)
+![Streamlit_running](F:\vscode main\ai_jurnilistmain\streamlit run.png)

@@ -8,7 +8,7 @@ BACKEND_URL = "http://localhost:1234"  # Update port if needed
 
 def main(): 
     st.title("🥷 NewsNinja")
-    st.markdown("#### 🎙️ News & Reddit Audio Summarizer")
+    st.markdown("#### News & Reddit Audio Summarizer")
    
     # Initialize session state
     if 'topics' not in st.session_state:
@@ -22,11 +22,11 @@ def main():
         source_type = st.selectbox(
             "Data Sources",
             options=["both", "news", "reddit"],
-            format_func=lambda x: f"🌐 {x.capitalize()}" if x == "news" else f"📑 {x.capitalize()}"
+            format_func=lambda x: f"🌐 {x.capitalize()}" if x == "news" else f" {x.capitalize()}"
         )
 
     # Topic management
-    st.markdown("##### 📝 Topic Management")
+    st.markdown("#####  Topic Management")
     col1, col2 = st.columns([4, 1])
     with col1:
         new_topic = st.text_input(
@@ -43,11 +43,11 @@ def main():
 
     # Display selected topics
     if st.session_state.topics:
-        st.subheader("✅ Selected Topic")
+        st.subheader("Selected Topic")
         for i, topic in enumerate(st.session_state.topics[:3]):
             cols = st.columns([4, 1])
             cols[0].write(f"{i+1}. {topic}")
-            if cols[1].button("Remove ❌", key=f"remove_{i}"):
+            if cols[1].button("Remove ", key=f"remove_{i}"):
                 del st.session_state.topics[i]
                 st.rerun()
 
@@ -60,7 +60,7 @@ def main():
         if not st.session_state.topics:
             st.error("Please add at least one topic")
         else:
-            with st.spinner("🔍 Analyzing topics and generating audio..."):
+            with st.spinner("Analyzing topics and generating audio..."):
                 try:
                     response = requests.post(
                         f"{BACKEND_URL}/generate-news-audio",
@@ -84,7 +84,7 @@ def main():
                 except requests.exceptions.ConnectionError:
                     st.error("🔌 Connection Error: Could not reach the backend server")
                 except Exception as e:
-                    st.error(f"⚠️ Unexpected Error: {str(e)}")
+                    st.error(f" Unexpected Error: {str(e)}")
 
 
 def handle_api_error(response):
