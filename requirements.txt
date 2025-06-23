@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic==2.5.2
+openai
+langchain
+requests
+aiohttp
+beautifulsoup4
+newspaper3k
+tiktoken
+edge-tts
+elevenlabs
+streamlit
+praw
+googlesearch-python
